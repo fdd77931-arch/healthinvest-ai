@@ -1,0 +1,10 @@
+'use client'
+import {useState} from 'react'
+import facts from '../lib/financials.json'
+export default function Monitor(){
+ const [metric,setMetric]=useState<'sales'|'profit'>('sales'),[year,setYear]=useState(3)
+ const series=Object.entries(facts).map(([name,rows])=>({name,values:rows.map(r=>100*r[metric]/rows[0][metric])}))
+ const top=Math.ceil(Math.max(...series.flatMap(s=>s.values))/50)*50
+ const x=(i:number)=>50+145*i,y=(v:number)=>172-150*v/top
+ return <div className="monitor"><section><div className="cap"><small>FINANCIAL PERFORMANCE</small><span>FY 2022—2025</span></div><h2>同业增长轨迹</h2><div className="switch">{(['sales','profit'] as const).map((m,i)=><button key={m} aria-pressed={m===metric} onClick={()=>setMetric(m)}>{i?'净利润':'营业收入'}</button>)}</div><div className="legend">● LLY　<span>● NVO</span>　 ·　2022 = 100</div><svg viewBox="0 0 530 200" role="img" aria-label="公司财务指数趋势图">{[0,.25,.5,.75,1].map(t=><g key={t}><line x1="50" x2="495" y1={y(top*t)} y2={y(top*t)} stroke="#2d3943"/><text x="9" y={y(top*t)+4}>{Math.round(top*t)}</text></g>)}{series.map((s,j)=><g key={s.name} fill={j?'#edbb75':'#7adbc7'}><polyline fill="none" stroke={j?'#edbb75':'#7adbc7'} strokeWidth="3" points={s.values.map((v,i)=>x(i)+','+y(v)).join(' ')}/>{s.values.map((v,i)=><circle key={i} cx={x(i)} cy={y(v)} r={i===year?5:3}/>)}</g>)}{facts.LLY.map((r,i)=><text key={r.year} x={x(i)-15} y="195">{r.year}</text>)}</svg><label className="year">查看财年 <select value={year} onChange={e=>setYear(+e.target.value)}>{facts.LLY.map((r,i)=><option value={i} key={i}>{r.year}</option>)}</select>　{series.map(s=>s.name+' '+s.values[year].toFixed(1)).join('　/　')}</label></section><section><div className="cap"><small>COMPANY MONITOR</small><span>SEC 年报</span></div><h2>同业净利率</h2>{Object.entries(facts).map(([t,rows])=>{const r=rows[year],pct=100*r.profit/r.sales;return <div className="marginline" key={t}><div><b>{t}</b><strong>{pct.toFixed(1)}%</strong></div><meter min="0" max="100" value={pct}/><a href={r.profitUrl}>{r.year} 财年申报 ↗</a></div>})}<a href="#companies">打开估值情景 →</a></section></div>
+}

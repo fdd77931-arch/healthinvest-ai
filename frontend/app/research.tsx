@@ -1,0 +1,8 @@
+'use client'
+import {useState} from 'react'
+type Result={answer:string;model:string;sources:{title:string;url:string}[]}
+export default function Research({ids,insert}:{ids:string[];insert:(s:string)=>void}){
+ const [q,question]=useState(''),[provider,choose]=useState('deepseek'),[busy,loading]=useState(false),[error,fail]=useState(''),[result,show]=useState<Result>()
+ async function ask(){loading(true);fail('');show(undefined);try{const res=await fetch(process.env.NEXT_PUBLIC_PAGES==='1'?'https://healthinvest-research.fdd77931-drug-safety.workers.dev/research':'/api/v1/research',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({provider,question:q,ids})});const body=await res.json();if(!res.ok)throw Error(typeof body.detail==='string'?body.detail:'请求未成功');show(body)}catch(e){fail(e instanceof Error?e.message:'服务不可用')}finally{loading(false)}}
+ return <section className="panel"><h2>基于来源提问</h2><p>{ids.length} 条研究记录将随问题发送给所选模型。收藏记录后可缩小范围。</p><textarea aria-label="研究问题" value={q} maxLength={1500} onChange={e=>question(e.target.value)} placeholder="例如：两项肥胖症试验的主要终点有哪些差异？"/><select aria-label="研究模型" value={provider} onChange={e=>choose(e.target.value)}><option value="deepseek">DeepSeek</option><option value="bailian">百炼 · 通义千问</option></select> <button disabled={busy||!q.trim()||!ids.length} onClick={ask}>{busy?'正在分析…':'提交研究问题'}</button><p role="status">{error}</p>{result&&<><small>{result.model} · AI 研究回答</small><p style={{whiteSpace:'pre-wrap'}}>{result.answer}</p><ol>{result.sources.map(s=><li key={s.url}><a href={s.url} target="_blank" rel="noreferrer">{s.title}</a></li>)}</ol><button onClick={()=>insert(result.answer+'\n'+result.sources.map((s,i)=>'['+(i+1)+'] '+s.url).join('\n'))}>添加到草稿</button></>}</section>
+}

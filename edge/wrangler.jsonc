@@ -1,0 +1,12 @@
+{
+  "name": "healthinvest-research",
+  "main": "index.js",
+  "compatibility_date": "2026-11-18",
+  "workers_dev": true,
+  "preview_urls": false,
+  "observability": { "enabled": false },
+  "durable_objects": {
+    "bindings": [{ "name": "QUOTA", "class_name": "DailyQuota" }]
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["DailyQuota"] }]
+}

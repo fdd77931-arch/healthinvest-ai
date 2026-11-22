@@ -1,0 +1,83 @@
+[
+  {
+    "id": "NHANES",
+    "title": "肥胖症 · 美国成年人口",
+    "group": "疾病研究",
+    "sub": "CDC / NCHS · Obesity",
+    "url": "https://www.cdc.gov/nchs/products/databriefs/db508.htm",
+    "period": "2021.08 – 2023.08",
+    "fields": {
+      "20 岁及以上": "40.3%",
+      "20–39 岁": "35.5%",
+      "40–59 岁": "46.4%",
+      "60 岁及以上": "38.9%",
+      "口径": "美国 NHANES 实测 BMI ≥30，粗患病率，表 1。调查患病人数不能直接折算为用药人数。"
+    }
+  },
+  {
+    "id": "NCT04184622",
+    "title": "Tirzepatide · 替尔泊肽",
+    "group": "药物研发",
+    "sub": "A Study of Tirzepatide (LY3298176) in Participants With Obesity or Overweight",
+    "url": "https://clinicaltrials.gov/study/NCT04184622",
+    "period": "2025-07-24",
+    "fields": {
+      "申办方": "Eli Lilly and Company",
+      "阶段": "PHASE3",
+      "状态": "COMPLETED",
+      "入组人数": "2539",
+      "主要终点": "Percent Change From Baseline in Body Weight (Primary Treatment Period) (Baseline, Week 72) / Percentage of Participants Who Achieve ≥5% Body Weight Reduction (Primary Treatment Period) (Week 72)",
+      "研究人群": "Overweight / Obesity"
+    }
+  },
+  {
+    "id": "NCT03548935",
+    "title": "Semaglutide · 司美格鲁肽",
+    "group": "药物研发",
+    "sub": "STEP 1: Research Study Investigating How Well Semaglutide Works in People Suffering From Overweight or Obesity",
+    "url": "https://clinicaltrials.gov/study/NCT03548935",
+    "period": "2021-11-19",
+    "fields": {
+      "申办方": "Novo Nordisk A/S",
+      "阶段": "PHASE3",
+      "状态": "COMPLETED",
+      "入组人数": "1961",
+      "主要终点": "Change in Body Weight (%) (Baseline (week 0) to week 68) / Participants Who Achieve 5 or More Percent Body Weight Reduction (Yes/no) (After week 68)",
+      "研究人群": "Metabolism and Nutrition Disorder / Overweight or Obesity"
+    }
+  },
+  {
+    "id": "LLY",
+    "title": "Eli Lilly",
+    "group": "企业研究",
+    "sub": "LLY · SEC EDGAR",
+    "url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/0000059478-26-000013-index.htm",
+    "period": "2025-12-31",
+    "fields": {
+      "年度营收": "65.18 十亿 USD",
+      "报告期间": "2025-01-01 — 2025-12-31",
+      "申报日期": "2026-02-12",
+      "表单": "10-K",
+      "XBRL 科目": "us-gaap:Revenues",
+      "原始金额": "65,179,000,000 USD",
+      "申报编号": "0000059478-26-000013"
+    }
+  },
+  {
+    "id": "NVO",
+    "title": "Novo Nordisk",
+    "group": "企业研究",
+    "sub": "NVO · SEC EDGAR",
+    "url": "https://www.sec.gov/Archives/edgar/data/353278/000035327826000012/0000353278-26-000012-index.htm",
+    "period": "2025-12-31",
+    "fields": {
+      "年度营收": "309.06 十亿 DKK",
+      "报告期间": "2025-01-01 — 2025-12-31",
+      "申报日期": "2026-02-04",
+      "表单": "20-F",
+      "XBRL 科目": "ifrs-full:Revenue",
+      "原始金额": "309,064,000,000 DKK",
+      "申报编号": "0000353278-26-000012"
+    }
+  }
+]

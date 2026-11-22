@@ -1,0 +1,70 @@
+{
+  "LLY": [
+    {
+      "year": 2022,
+      "unit": "USD",
+      "sales": 28.5414,
+      "salesUrl": "https://www.sec.gov/Archives/edgar/data/59478/000005947825000067/0000059478-25-000067-index.htm",
+      "profit": 6.2448,
+      "profitUrl": "https://www.sec.gov/Archives/edgar/data/59478/000005947825000067/0000059478-25-000067-index.htm"
+    },
+    {
+      "year": 2023,
+      "unit": "USD",
+      "sales": 34.124,
+      "salesUrl": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/0000059478-26-000013-index.htm",
+      "profit": 5.24,
+      "profitUrl": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/0000059478-26-000013-index.htm"
+    },
+    {
+      "year": 2024,
+      "unit": "USD",
+      "sales": 45.043,
+      "salesUrl": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/0000059478-26-000013-index.htm",
+      "profit": 10.59,
+      "profitUrl": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/0000059478-26-000013-index.htm"
+    },
+    {
+      "year": 2025,
+      "unit": "USD",
+      "sales": 65.179,
+      "salesUrl": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/0000059478-26-000013-index.htm",
+      "profit": 20.64,
+      "profitUrl": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/0000059478-26-000013-index.htm"
+    }
+  ],
+  "NVO": [
+    {
+      "year": 2022,
+      "unit": "DKK",
+      "sales": 176.954,
+      "salesUrl": "https://www.sec.gov/Archives/edgar/data/353278/000162828025003920/0001628280-25-003920-index.htm",
+      "profit": 55.525,
+      "profitUrl": "https://www.sec.gov/Archives/edgar/data/353278/000162828025003920/0001628280-25-003920-index.htm"
+    },
+    {
+      "year": 2023,
+      "unit": "DKK",
+      "sales": 232.261,
+      "salesUrl": "https://www.sec.gov/Archives/edgar/data/353278/000035327826000012/0000353278-26-000012-index.htm",
+      "profit": 83.683,
+      "profitUrl": "https://www.sec.gov/Archives/edgar/data/353278/000035327826000012/0000353278-26-000012-index.htm"
+    },
+    {
+      "year": 2024,
+      "unit": "DKK",
+      "sales": 290.403,
+      "salesUrl": "https://www.sec.gov/Archives/edgar/data/353278/000035327826000012/0000353278-26-000012-index.htm",
+      "profit": 100.988,
+      "profitUrl": "https://www.sec.gov/Archives/edgar/data/353278/000035327826000012/0000353278-26-000012-index.htm"
+    },
+    {
+      "year": 2025,
+      "unit": "DKK",
+      "sales": 309.064,
+      "salesUrl": "https://www.sec.gov/Archives/edgar/data/353278/000035327826000012/0000353278-26-000012-index.htm",
+      "profit": 102.434,
+      "profitUrl": "https://www.sec.gov/Archives/edgar/data/353278/000035327826000012/0000353278-26-000012-index.htm"
+    }
+  ]
+}
